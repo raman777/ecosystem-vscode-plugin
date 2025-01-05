@@ -78,7 +78,7 @@ export class DeploymentSupport {
         let query: string = '?force=true';
         let parsedPath = path.parse(appPath);
         let name = parsedPath.base;
-        if (parsedPath.ext === '.war' || parsedPath.ext === '.jar') {
+        if (parsedPath.ext === '.ear' || parsedPath.ext === '.war' || parsedPath.ext === '.jar') {
             name = parsedPath.name;
         }
         var uploadFile;

@@ -825,7 +825,7 @@ export class PayaraServerInstanceController extends PayaraInstanceController {
         let callback = (server: PayaraServerInstance) => {
             let deploy = async (status: boolean) => {
                 if (status) {
-                    if (uri.fsPath.endsWith('.war') || uri.fsPath.endsWith('.jar')) {
+                    if (uri.fsPath.endsWith('.ear') || uri.fsPath.endsWith('.war') || uri.fsPath.endsWith('.jar')) {
                         support.deployApplication(uri.fsPath, server, debug, autoDeploy, metadataChanged, sourcesChanged);
                     } else {
                         try {

@@ -50,6 +50,13 @@ export class RestEndpoints {
                                 let exitCode = report.$['exit-code'];
                                 if (exitCode === 'SUCCESS' && success) {
                                     success(response, report);
+                                } else if (exitCode === 'WARNING' && success) {
+                                    success(response, report);
+                                    if (failure) {
+                                        failure(response, report['message-part'][0].$['message']);
+                                    } else {
+                                        vscode.window.showErrorMessage(report['message-part'][0].$['message']);
+                                    }
                                 } else if (failure) {
                                     failure(response, report['message-part'][0].$['message']);
                                 } else {

@@ -493,12 +493,12 @@
 			"explorer/context": [
 				{
 					"command": "payara.server.app.deploy",
-					"when": "explorerResourceIsFolder == true || resourceLangId == java || resourceFilename == pom.xml || resourceFilename == build.gradle || resourceExtname == .war || resourceExtname == .jar",
+					"when": "explorerResourceIsFolder == true || resourceLangId == java || resourceFilename == pom.xml || resourceFilename == build.gradle || resourceExtname == .ear || resourceExtname == .war || resourceExtname == .jar",
 					"group": "run@0"
 				},
 				{
 					"command": "payara.server.app.debug",
-					"when": "explorerResourceIsFolder == true || resourceLangId == java || resourceFilename == pom.xml || resourceFilename == build.gradle || resourceExtname == .war || resourceExtname == .jar",
+					"when": "explorerResourceIsFolder == true || resourceLangId == java || resourceFilename == pom.xml || resourceFilename == build.gradle || resourceExtname == .ear || resourceExtname == .war || resourceExtname == .jar",
 					"group": "run@1"
 				},
 				{
